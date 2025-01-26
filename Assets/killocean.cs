@@ -31,7 +31,7 @@ public class killocean : MonoBehaviour
         if (other.gameObject.GetComponent<PlayerMovement>()){
             other.gameObject.GetComponent<PlayerMovement>().rip();
         }
-        else if (other.gameObject.GetComponent<spawninnercontent>()){
+        else if (other.gameObject.GetComponent<PlataformBehaviour>()){
             Destroy(other.gameObject);
         }
     }

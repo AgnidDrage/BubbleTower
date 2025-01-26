@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2909285975627308228}
   - component: {fileID: 235197857796123830}
-  - component: {fileID: -6449705584595972281}
-  - component: {fileID: -3775371999213135449}
+  - component: {fileID: 2050846785305738604}
+  - component: {fileID: -2690913296105151146}
+  - component: {fileID: 8521941930433285532}
   m_Layer: 3
   m_Name: Bubble
   m_TagString: Untagged
@@ -86,7 +87,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-6449705584595972281
+--- !u!114 &2050846785305738604
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,12 +96,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2268537503122454530}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4933f6d2d3782094fbdeaccccec06e9b, type: 3}
+  m_Script: {fileID: 11500000, guid: dee46d2fdbc7df14dbfaaccde54cbfaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlatform: 1
---- !u!61 &-3775371999213135449
-BoxCollider2D:
+  arrayofobjects:
+  - {fileID: 440760915171328656, guid: 7db3983489cb53b49a53dc8b502bf4f9, type: 3}
+  - {fileID: 5146544015314636164, guid: 1840c20f1edfc8e49b17e179cee78452, type: 3}
+--- !u!58 &-2690913296105151146
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -114,7 +117,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -132,15 +135,32 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.5
+--- !u!50 &8521941930433285532
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2268537503122454530}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
