@@ -102,12 +102,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabknife: {fileID: 5975837598526724613, guid: 7d6594edc08d4564ab322a7aaeef5b9f, type: 3}
   speed: 7
-  jumpForce: 8
+  jumpForce: 14
   onJump: 0
   jumpBufferTime: 0.2
   jumpBufferCounter: 0
   legheight: 0.1
   attackCooldown: 0.5
+  isGrounded: 1
+  isMoving: 0
 --- !u!61 &1042810175661679534
 BoxCollider2D:
   m_ObjectHideFlags: 0
