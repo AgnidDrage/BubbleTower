@@ -16,6 +16,7 @@ public class spawninnercontent : MonoBehaviour
         platformpreview = Instantiate(prefabtargetobject,transform.position,Quaternion.identity);
         platformpreview.transform.parent = transform;
         platformpreview.transform.localScale = 0.5f*Vector3.one;
+        platformpreview.layer = 3;
     }
 
     // Update is called once per frame
@@ -25,6 +26,7 @@ public class spawninnercontent : MonoBehaviour
         foreach (var hitcollider in hitcolliders){
           if (hitcollider.gameObject.GetComponent<ProjectileBehaviour>()){
             isPopped();
+            Destroy(hitcollider.gameObject);
           }
         }
     }

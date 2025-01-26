@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6926993828437554810}
   - component: {fileID: 724553534396249715}
   - component: {fileID: 3151629453596954977}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: cb96c15b44fc41443a49734ddabf796a, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
