@@ -5,4 +5,5 @@ using UnityEngine;
 public class PlataformBehaviour : MonoBehaviour
 {
     public bool isPlatform = true;
+
 }

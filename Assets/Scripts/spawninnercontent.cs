@@ -22,7 +22,7 @@ public class spawninnercontent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Collider2D[] hitcolliders = Physics2D.OverlapCircleAll(transform.position,0.2f,1<<3);
+        Collider2D[] hitcolliders = Physics2D.OverlapCircleAll(transform.position,1.1f,1<<3);
         foreach (var hitcollider in hitcolliders){
           if (hitcollider.gameObject.GetComponent<ProjectileBehaviour>()){
             isPopped();
@@ -35,9 +35,11 @@ public class spawninnercontent : MonoBehaviour
       platformpreview.transform.localScale = Vector3.one;
       platformpreview.transform.parent = transform.parent.transform;
       platformpreview.AddComponent<BoxCollider2D>();
+      platformpreview.GetComponent<BoxCollider2D>().excludeLayers = 3;
       platformpreview.AddComponent<Rigidbody2D>();
-      platformpreview.GetComponent<Rigidbody2D>().velocity = new Vector2(0,-transform.parent.GetComponent<mapadminscript>().rushspeed);
-      platformpreview.layer = 0;
+      platformpreview.GetComponent<Rigidbody2D>().isKinematic = true;
+      platformpreview.GetComponent<Rigidbody2D>().velocity = new Vector2(0,platformpreview.transform.parent.GetComponent<mapadminscript>().rushspeed);
+      platformpreview.layer = 8;
       Destroy(gameObject); // agregar particulas de explosion
     
     }

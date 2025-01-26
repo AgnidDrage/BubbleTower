@@ -1,14 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Mathematics;
-using UnityEditor.Tilemaps;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private GameObject prefabknife;
     [SerializeField] private float speed = 7f;
-    [SerializeField] private float jumpForce = 15f;
+    [SerializeField] private float jumpForce = 40f;
     // Jump vars
     public bool onJump;
     private float coyoteTime = 0.2f;
@@ -169,6 +166,11 @@ public class PlayerMovement : MonoBehaviour
         {
             return false;
         }
+    }
 
+    public void rip()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
     }
 }
