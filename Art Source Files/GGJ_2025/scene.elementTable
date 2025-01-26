@@ -19,4 +19,6 @@
  <element id="17" elementName="Daga" elementFolder="Daga" pixmapFormat="2" scanType="2" fieldChart="12" vectorType="2" rootFolder="elements"/>
  <element id="18" elementName="Espada" elementFolder="Espada" pixmapFormat="2" scanType="2" fieldChart="12" vectorType="2" rootFolder="elements"/>
  <element id="21" elementName="Refe" elementFolder="Refe" pixmapFormat="2" scanType="2" fieldChart="12" vectorType="2" rootFolder="elements"/>
+ <element id="22" elementName="Ocean" elementFolder="Ocean" pixmapFormat="2" scanType="2" fieldChart="12" vectorType="2" rootFolder="elements"/>
+ <element id="23" elementName="OceanSketch" elementFolder="OceanSketch" pixmapFormat="2" scanType="2" fieldChart="12" vectorType="2" rootFolder="elements"/>
 </elements>

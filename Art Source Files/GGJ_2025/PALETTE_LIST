@@ -1,4 +1,5 @@
 ToonBoomAnimationInc PaletteList 1
-palette-library/GGJ_2025 LINK "D:/Animation_Proyects/GGJ_2025/palette-library/GGJ_2025.plt"
-palette-library/GGJ_2025_pencil_texture LINK "D:/Animation_Proyects/GGJ_2025/palette-library/GGJ_2025_pencil_texture.plt"
-palette-library/VectorizedTextures_rec LINK "D:/Animation_Proyects/GGJ_2025/palette-library/VectorizedTextures_rec.plt"
+palette-library/GGJ_2025 LINK "D:/Unity Projects/BubbleTower/Art Source Files/GGJ_2025/palette-library/GGJ_2025.plt"
+palette-library/GGJ_2025_pencil_texture LINK "D:/Unity Projects/BubbleTower/Art Source Files/GGJ_2025/palette-library/GGJ_2025_pencil_texture.plt"
+palette-library/VectorizedTextures_rec LINK "D:/Unity Projects/BubbleTower/Art Source Files/GGJ_2025/palette-library/VectorizedTextures_rec.plt"
+palette-library/Ocean LINK "D:/Unity Projects/BubbleTower/Art Source Files/GGJ_2025/palette-library/Ocean.plt"
