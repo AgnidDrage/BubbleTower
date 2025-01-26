@@ -15,7 +15,7 @@ public class spawninnercontent : MonoBehaviour
         prefabtargetobject= arrayofobjects[Random.Range(0, arrayofobjects.Length)];
         platformpreview = Instantiate(prefabtargetobject,transform.position,Quaternion.identity);
         platformpreview.transform.parent = transform;
-        platformpreview.transform.localScale = 0.5f*Vector3.one;
+        platformpreview.transform.localScale = 0.3f*Vector3.one;
         platformpreview.layer = 3;
     }
 
@@ -32,10 +32,10 @@ public class spawninnercontent : MonoBehaviour
     }
 
     void isPopped(){
-      platformpreview.transform.localScale = Vector3.one;
+      platformpreview.transform.localScale = Vector3.one*0.5f;
       platformpreview.transform.parent = transform.parent.transform;
-      platformpreview.AddComponent<BoxCollider2D>();
-      platformpreview.GetComponent<BoxCollider2D>().excludeLayers = 3;
+      // platformpreview.AddComponent<BoxCollider2D>();
+      // platformpreview.GetComponent<BoxCollider2D>().excludeLayers = 3;
       platformpreview.AddComponent<Rigidbody2D>();
       platformpreview.GetComponent<Rigidbody2D>().isKinematic = true;
       platformpreview.GetComponent<Rigidbody2D>().velocity = new Vector2(0,platformpreview.transform.parent.GetComponent<mapadminscript>().rushspeed);

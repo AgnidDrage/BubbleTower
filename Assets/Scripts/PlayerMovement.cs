@@ -20,6 +20,9 @@ public class PlayerMovement : MonoBehaviour
     private float attackCooldownCounter;
     private bool canAttack = true;
     private Rigidbody2D rb;
+    public bool isGrounded = true;
+    public bool isMoving=false;
+    private Animator anim;
 
 
 
@@ -28,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         dynamicforward = true;
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -49,6 +53,8 @@ public class PlayerMovement : MonoBehaviour
             canAttack = true;
             attackCooldownCounter = 0;
         }
+        anim.SetBool("IsGrounded", isGrounded);
+        anim.SetBool("IsWalking", isMoving);
 
     }
 
@@ -81,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
         {
-
+            isMoving = true;
             if (Input.GetKey(KeyCode.LeftArrow))
             {
                 LastDirisLeft = true;
@@ -104,6 +110,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(speed*leftdir, rb.velocity.y);
         } else
         {
+            isMoving = false;
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
     }
@@ -124,6 +131,7 @@ public class PlayerMovement : MonoBehaviour
         }
         
         KnifeObject.GetComponent<ProjectileBehaviour>().rbk =  KnifeObject.GetComponent<Rigidbody2D>();
+        anim.SetTrigger("Throw");
         KnifeObject.GetComponent<ProjectileBehaviour>().Throw(leftangle);
         attackCooldownCounter = attackCooldown;
         canAttack = false;
@@ -148,22 +156,24 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (hit.collider.gameObject.layer == 3) // Layer 6 is the platform prewiew layer
                 {
+                    isGrounded = false;
                     return false;
                 }
                 else
                 {
+                    isGrounded = true;
                     return true;
                 }
             }
             else
             {
-
-
+                isGrounded = false;
                 return false;
             }
         }
         else
         {
+            isGrounded = false;
             return false;
         }
     }
