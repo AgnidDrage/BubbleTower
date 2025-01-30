@@ -56,6 +56,11 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("IsGrounded", isGrounded);
         anim.SetBool("IsWalking", isMoving);
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Quit();
+        }
+
     }
 
     private void Jump()
@@ -182,5 +187,11 @@ public class PlayerMovement : MonoBehaviour
     {
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
+    }
+
+    public void Quit()
+    {
+        Debug.Log("Quit");
+        Application.Quit();
     }
 }

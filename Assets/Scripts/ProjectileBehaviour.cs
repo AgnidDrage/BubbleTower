@@ -19,6 +19,7 @@ public class ProjectileBehaviour : MonoBehaviour
     {
         Debug.Log("Throwing");
         rbk.AddForce(new Vector2(inverter*8,4), ForceMode2D.Impulse);
+        rbk.angularVelocity = -inverter*1000;
     
     }
 
