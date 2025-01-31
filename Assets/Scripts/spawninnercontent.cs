@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random=UnityEngine.Random;
 
 public class spawninnercontent : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] GameObject[] arrayofobjects;
+    [SerializeField] GameObject bubbleParticles;
     GameObject prefabtargetobject; // List of possible platforms
     GameObject platformpreview;
     
@@ -41,6 +44,8 @@ public class spawninnercontent : MonoBehaviour
       platformpreview.GetComponent<Rigidbody2D>().velocity = new Vector2(0,platformpreview.transform.parent.GetComponent<mapadminscript>().rushspeed);
       platformpreview.layer = 8;
       Destroy(gameObject); // agregar particulas de explosion
+      GameObject particlesInstance = Instantiate (bubbleParticles, transform.position, quaternion.identity);
+      Destroy(particlesInstance, 1.0f);
     
     }
 }

@@ -104,7 +104,7 @@ MonoBehaviour:
   - {fileID: 5146544015314636164, guid: 1840c20f1edfc8e49b17e179cee78452, type: 3}
   - {fileID: 5146544015314636164, guid: 9a1148d198ed7304d895661ef4aabc52, type: 3}
   - {fileID: 5146544015314636164, guid: b5d86325911790b459d2e9ebfe5af3a1, type: 3}
-  - {fileID: 440760915171328656, guid: 68604c2d437744244b9d3a3efcad4ea1, type: 3}
+  bubbleParticles: {fileID: 4388807321016287243, guid: 4860d009db6d86d43918844fd95224ad, type: 3}
 --- !u!58 &-2690913296105151146
 CircleCollider2D:
   m_ObjectHideFlags: 0
